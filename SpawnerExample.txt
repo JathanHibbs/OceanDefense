@@ -1,0 +1,6 @@
+Spawner #
+
+int Wave #
+int enemy type
+int enemy count
+float interval

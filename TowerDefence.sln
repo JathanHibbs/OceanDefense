@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TowerDefence", "ProjectLlamaCats.vcxproj", "{915F23C0-9B88-4627-8A0B-464B503DC1CD}"
+EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Ocean Defense Installer", "Ocean Defense Installer\Ocean Defense Installer.aiproj", "{AA3EF41A-D6EA-4609-B8E3-91CED76CB684}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		DefaultBuild|x86 = DefaultBuild|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{915F23C0-9B88-4627-8A0B-464B503DC1CD}.Debug|x86.ActiveCfg = Debug|Win32
+		{915F23C0-9B88-4627-8A0B-464B503DC1CD}.Debug|x86.Build.0 = Debug|Win32
+		{915F23C0-9B88-4627-8A0B-464B503DC1CD}.DefaultBuild|x86.ActiveCfg = Debug|Win32
+		{915F23C0-9B88-4627-8A0B-464B503DC1CD}.DefaultBuild|x86.Build.0 = Debug|Win32
+		{915F23C0-9B88-4627-8A0B-464B503DC1CD}.Release|x86.ActiveCfg = Release|Win32
+		{915F23C0-9B88-4627-8A0B-464B503DC1CD}.Release|x86.Build.0 = Release|Win32
+		{AA3EF41A-D6EA-4609-B8E3-91CED76CB684}.Debug|x86.ActiveCfg = DefaultBuild
+		{AA3EF41A-D6EA-4609-B8E3-91CED76CB684}.Debug|x86.Build.0 = DefaultBuild
+		{AA3EF41A-D6EA-4609-B8E3-91CED76CB684}.DefaultBuild|x86.ActiveCfg = DefaultBuild
+		{AA3EF41A-D6EA-4609-B8E3-91CED76CB684}.DefaultBuild|x86.Build.0 = DefaultBuild
+		{AA3EF41A-D6EA-4609-B8E3-91CED76CB684}.Release|x86.ActiveCfg = DefaultBuild
+		{AA3EF41A-D6EA-4609-B8E3-91CED76CB684}.Release|x86.Build.0 = DefaultBuild
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AEFA4F1-66F6-4A88-A05E-23BF7642D517}
+	EndGlobalSection
+EndGlobal

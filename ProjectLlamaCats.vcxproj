@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{915F23C0-9B88-4627-8A0B-464B503DC1CD}</ProjectGuid>
+    <ProjectName>TowerDefence</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\Alpha_Engine (With Textures)\Alpha_Engine;Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <StructMemberAlignment>4Bytes</StructMemberAlignment>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Alpha_Engine.lib;fmodexL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\Alpha_Engine (With Textures)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>false</GenerateMapFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\Alpha_Engine (With Textures)\Alpha_Engine;Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Alpha_Engine.lib;fmodex_vc;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\Alpha_Engine (With Textures)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\animation.cpp" />
+    <ClCompile Include="src\BinaryMap.c" />
+    <ClCompile Include="src\CharacterSet.cpp" />
+    <ClCompile Include="src\EnemyBehavior.cpp" />
+    <ClCompile Include="src\EnemyMapFunctions.cpp" />
+    <ClCompile Include="src\FontMain.cpp" />
+    <ClCompile Include="src\GameStateMgr.cpp" />
+    <ClCompile Include="src\GameState_Level1.cpp" />
+    <ClCompile Include="src\GameState_LevelSelect.cpp" />
+    <ClCompile Include="src\GameState_Lose.cpp" />
+    <ClCompile Include="src\GameState_Start.cpp" />
+    <ClCompile Include="src\GUI_Buttons.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Math2D.c" />
+    <ClCompile Include="src\Matrix2D.c" />
+    <ClCompile Include="src\objects.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="src\Particles.cpp" />
+    <ClCompile Include="src\PathObjectScript.cpp" />
+    <ClCompile Include="src\PhysicsMovement.cpp" />
+    <ClCompile Include="src\PlayerBehavior.cpp" />
+    <ClCompile Include="src\popupMenu.cpp" />
+    <ClCompile Include="src\TextManager.cpp">
+      <CallingConvention Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Cdecl</CallingConvention>
+      <CallingConvention Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Cdecl</CallingConvention>
+    </ClCompile>
+    <ClCompile Include="src\TextObject.cpp" />
+    <ClCompile Include="src\TileSetFunctions.c" />
+    <ClCompile Include="src\TowerBehavior.cpp" />
+    <ClCompile Include="src\Vector2D.c" />
+    <ClCompile Include="src\WaveSpawnObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\2DGameEngineIncludes.h" />
+    <ClInclude Include="include\animation.h" />
+    <ClInclude Include="include\BinaryMap.h" />
+    <ClInclude Include="include\CharacterSet.h" />
+    <ClInclude Include="include\EnemyBehavior.h" />
+    <ClInclude Include="include\EnemyMapFunctions.h" />
+    <ClInclude Include="include\FontTypes.h" />
+    <ClInclude Include="include\GameStateList.h" />
+    <ClInclude Include="include\GameStateMgr.h" />
+    <ClInclude Include="include\GameState_Level1.h" />
+    <ClInclude Include="include\GameState_LevelSelect.h" />
+    <ClInclude Include="include\GameState_Lose.h" />
+    <ClInclude Include="include\GameState_Start.h" />
+    <ClInclude Include="include\GUI_Buttons.h" />
+    <ClInclude Include="include\main.h" />
+    <ClInclude Include="include\Math2D.h" />
+    <ClInclude Include="include\Matrix2D.h" />
+    <ClInclude Include="include\objects.h" />
+    <ClInclude Include="include\Particles.h" />
+    <ClInclude Include="include\PathObjectScript.h" />
+    <ClInclude Include="include\PhysicsMovement.h" />
+    <ClInclude Include="include\PlayerBehavior.h" />
+    <ClInclude Include="include\popupMenu.h" />
+    <ClInclude Include="include\TextManager.h" />
+    <ClInclude Include="include\TextObject.h" />
+    <ClInclude Include="include\TileSetFunctions.h" />
+    <ClInclude Include="include\TowerBehavior.h" />
+    <ClInclude Include="include\Vector2D.h" />
+    <ClInclude Include="src\currency.h" />
+    <ClInclude Include="src\WaveSpawnObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="textures\animTest.png" />
+    <Image Include="textures\BackArrow.png" />
+    <Image Include="textures\base.png" />
+    <Image Include="textures\BoatBase.png" />
+    <Image Include="textures\BoatTurret.png" />
+    <Image Include="textures\Bullet.png" />
+    <Image Include="textures\CharaSP.png" />
+    <Image Include="textures\coral reef.png" />
+    <Image Include="textures\crabbie.png" />
+    <Image Include="textures\debugCircle.png" />
+    <Image Include="textures\Doge.png" />
+    <Image Include="textures\dogeJpeg.jpg" />
+    <Image Include="textures\doggie paddle.png" />
+    <Image Include="textures\HealthBarEmpty.png" />
+    <Image Include="textures\HealthBarFull.png" />
+    <Image Include="textures\jake.png" />
+    <Image Include="textures\JELLIES.png" />
+    <Image Include="textures\Level1Button.png" />
+    <Image Include="textures\Level2Button.png" />
+    <Image Include="textures\Level3Button.png" />
+    <Image Include="textures\LevelSelectBackground.png" />
+    <Image Include="textures\MainMenuBackground.png" />
+    <Image Include="textures\MenuButton.png" />
+    <Image Include="textures\newTurret.png" />
+    <Image Include="textures\PauseScreen.png" />
+    <Image Include="textures\PlayerBase.png" />
+    <Image Include="textures\PlayerWeaponTmp.png" />
+    <Image Include="textures\QuitButton.png" />
+    <Image Include="textures\ScrollAddOn.png" />
+    <Image Include="textures\ScrollBottom.png" />
+    <Image Include="textures\shark.png" />
+    <Image Include="textures\tilemap.png" />
+    <Image Include="textures\tileMapFinished.png" />
+    <Image Include="textures\tilemapWithPaths.png" />
+    <Image Include="textures\tmpButton.png" />
+    <Image Include="textures\tmpQuitButton.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
